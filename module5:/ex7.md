@@ -1,4 +1,4 @@
-# PHP Web Shell (CPENT Lab Notes)
+# Exercise 7: Exploiting WordPress Web Application Vulnerability by Uploading a Customized Shell
 
 ## Objective
 
