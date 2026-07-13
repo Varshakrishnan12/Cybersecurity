@@ -1,6 +1,5 @@
-````markdown
-# CPENT Module 07 - Exercise 3
-# HTTP Tunneling to Bypass Firewalls Using HTTPort
+
+# Exercise 3 : HTTP Tunneling to Bypass Firewalls Using HTTPort
 
 ---
 
