@@ -902,6 +902,3 @@ mkdir Test
 Identify the tab in HTTHost where the Personal Password is configured.
 
 **Answer**options
-
-**Options Tab**. :contentReference[oaicite:0]{index=0}
-````
