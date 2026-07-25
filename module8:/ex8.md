@@ -1,4 +1,3 @@
-````md
 # Exercise 8: Abusing UAC High Integrity Level
 
 ## Objective
@@ -832,4 +831,3 @@ Process Hacker
 ```
 False
 ```
-````
