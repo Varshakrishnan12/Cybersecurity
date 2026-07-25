@@ -820,14 +820,12 @@ A Windows feature where trusted Microsoft applications automatically run with Hi
 
 **Q6. What tool is used to inspect Integrity Levels in this lab?**
 
-```
 Process Hacker
-```
 
 ---
 
 **Q7. What is the expected answer to the lab question?**
 
-```
 False
-```
+
+---
